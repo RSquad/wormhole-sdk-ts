@@ -78,10 +78,17 @@
     "platforms/aptos/protocols/core",
     "platforms/aptos/protocols/tokenBridge",
     "platforms/aptos/protocols/cctp",
+    "platforms/ton",
+    "platforms/ton/protocols/core",
     "sdk",
     "examples"
   ],
   "unreleased": [
     "tokenRegistry"
-  ]
+  ],
+  "dependencies": {
+    "@ton/ton": "^15.4.0",
+    "@wormhole-foundation/sdk-base": "^1.20.0",
+    "@wormhole-foundation/sdk-connect": "^1.20.0"
+  }
 }

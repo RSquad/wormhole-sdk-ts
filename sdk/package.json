@@ -66,6 +66,46 @@
         "default": "./dist/cjs/index.js"
       }
     },
+    "./platforms/ton": {
+      "react-native": {
+        "import": "./dist/esm/platforms/ton.js",
+        "require": "./dist/cjs/platforms/ton.js",
+        "types": "./dist/cjs/platforms/ton.d.ts",
+        "default": "./dist/cjs/platforms/ton.js"
+      },
+      "require": {
+        "types": "./dist/cjs/platforms/ton.d.ts",
+        "default": "./dist/cjs/platforms/ton.js"
+      },
+      "import": {
+        "types": "./dist/esm/platforms/ton.d.ts",
+        "default": "./dist/esm/platforms/ton.js"
+      },
+      "default": {
+        "types": "./dist/cjs/platforms/ton.d.ts",
+        "default": "./dist/cjs/platforms/ton.js"
+      }
+    },
+    "./ton": {
+      "react-native": {
+        "import": "./dist/esm/ton.js",
+        "require": "./dist/cjs/ton.js",
+        "types": "./dist/cjs/ton.d.ts",
+        "default": "./dist/cjs/ton.js"
+      },
+      "require": {
+        "types": "./dist/cjs/ton.d.ts",
+        "default": "./dist/cjs/ton.js"
+      },
+      "import": {
+        "types": "./dist/esm/ton.d.ts",
+        "default": "./dist/esm/ton.js"
+      },
+      "default": {
+        "types": "./dist/cjs/ton.d.ts",
+        "default": "./dist/cjs/ton.js"
+      }
+    },
     "./addresses": {
       "react-native": {
         "import": "./dist/esm/addresses.js",
@@ -376,6 +416,14 @@
       "platforms/sui": [
         "dist/cjs/platforms/sui.d.ts",
         "dist/esm/platforms/sui.d.ts"
+      ],
+      "platforms/ton": [
+        "dist/cjs/platforms/ton.d.ts",
+        "dist/esm/platforms/ton.d.ts"
+      ],
+      "ton": [
+        "dist/cjs/ton.d.ts",
+        "dist/esm/ton.d.ts"
       ],
       "*": [
         "dist/cjs/index.d.ts",

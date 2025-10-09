@@ -18,16 +18,16 @@ import {
   Address as TonAddressCore,
 } from "@ton/ton";
 import type { TonClient,OpenedContract } from "@ton/ton";
-import { mnemonicToPrivateKey } from "@ton/crypto";
+import { keyPairFromSeed } from "@ton/crypto";
 import { beginCell } from "@ton/core";
-import type {Cell } from "@ton/core";
+import type { Cell, StateInit } from "@ton/core";
 
 export type TonUnsignedMessage = {
   to: string | TonAddressCore;
   value: bigint;        // nanotons
   body?: Cell;
   bounce?: boolean;     // default true
-  stateInit?: Cell;
+  stateInit?: StateInit;
 };
 
 export async function getTonSigner(
@@ -39,17 +39,14 @@ export async function getTonSigner(
   const ton = rpc as unknown as TonClient;
 
   const secretKey = encoding.hex.decode(privateKeyHex);
-
-  const { publicKey } = await mnemonicToPrivateKey([]).catch(() => {
-    throw new Error(
-        "Provide ed25519 publicKey for TON wallet, or switch to mnemonics + mnemonicToPrivateKey",
-    );
-  });
-
-  const wallet = WalletContractV4.create({ workchain: 0, publicKey });
+  if (secretKey.length !== 32) {
+    throw new Error("TON ed25519 secret key must be 32 bytes");
+  }
+  const keyPair = keyPairFromSeed(secretKey);
+  const wallet = WalletContractV4.create({ workchain: 0, publicKey: Buffer.from(keyPair.publicKey) });
   const opened: OpenedContract<WalletContractV4> = ton.open(wallet);
 
-  return new TonSigner(chain as TonChains, opened, secretKey, ton);
+  return new TonSigner(chain as TonChains, opened, keyPair.secretKey);
 }
 
 export class TonSigner<N extends Network, C extends TonChains>
@@ -58,8 +55,7 @@ export class TonSigner<N extends Network, C extends TonChains>
   constructor(
       private _chain: C,
       private _wallet: OpenedContract<WalletContractV4>,
-      private _secretKey: Uint8Array,     // ed25519 secret key (32 bytes)
-      private _rpc: TonClient,
+      private _secretKey: Uint8Array,     // ed25519 secret key (64 bytes)
       private _debug?: boolean,
   ) {}
 
@@ -94,7 +90,7 @@ export class TonSigner<N extends Network, C extends TonChains>
       const seqno = await this._wallet.getSeqno();
 
       await this._wallet.sendTransfer({
-        secretKey: this._secretKey,
+        secretKey: Buffer.from(this._secretKey),
         seqno,
         messages: [
           internal({
@@ -102,6 +98,7 @@ export class TonSigner<N extends Network, C extends TonChains>
             value: transaction.value,
             body,
             bounce,
+            init: transaction.stateInit,
           }),
         ],
         sendMode: SendMode.PAY_GAS_SEPARATELY,

@@ -23,8 +23,7 @@ import { _platform } from "./types.js";
  */
 export class TonPlatform<N extends Network>
     extends PlatformContext<N, TonPlatformType>
-    implements StaticPlatformMethods<TonPlatformType, typeof TonPlatform>
-{
+    implements StaticPlatformMethods<TonPlatformType, typeof TonPlatform> {
   static _platform = _platform;
 
   constructor(network: N, config?: ChainsConfig<N, TonPlatformType>) {
@@ -35,7 +34,7 @@ export class TonPlatform<N extends Network>
     if (chain in this.config) {
       const endpoint = this.config[chain]!.rpc;
       if (!endpoint) throw new Error(`Empty TON RPC endpoint for chain ${String(chain)}`);
-      return new TonClient({ endpoint });
+      return new TonClient({endpoint});
     }
     throw new Error("No configuration available for chain: " + chain);
   }
@@ -57,6 +56,11 @@ export class TonPlatform<N extends Network>
   }
 
   static async getLatestBlock(rpc: TonClient): Promise<number> {
+    const info = await rpc.getMasterchainInfo();
+    return Number(info.latestSeqno);
+  }
+
+  static async getLatestFinalizedBlock(rpc: TonClient): Promise<number> {
     const info = await rpc.getMasterchainInfo();
     return Number(info.latestSeqno);
   }
@@ -88,6 +92,10 @@ export class TonPlatform<N extends Network>
   }
 
   static async chainFromRpc(this: typeof TonPlatform, rpc: TonClient): Promise<[Network, TonChains]> {
+    const url = (rpc as any)?.endpoint as string | undefined;
+    if (url && /test|sandbox|toncenter.*test/i.test(url)) {
+      return ["Testnet" as Network, "Ton" as TonChains];
+    }
     await rpc.getMasterchainInfo();
     return ["Mainnet" as Network, "Ton" as TonChains];
   }
