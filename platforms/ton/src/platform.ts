@@ -15,8 +15,10 @@ import {
 
 import { TonClient } from "@ton/ton";
 import { TonChain } from "./chain.js";
-import type { TonChains, TonPlatformType } from "./types.js";
+import type {AnyTonAddress, TonChains, TonPlatformType} from "./types.js";
 import { _platform } from "./types.js";
+import type { Balances, TokenId } from "@wormhole-foundation/sdk-definitions";
+import type { TonClient as Ton } from "@ton/ton";
 
 /**
  * @category Ton
@@ -47,6 +49,44 @@ export class TonPlatform<N extends Network>
   static isSupportedChain(chain: Chain): boolean {
     const platform = chainToPlatform(chain);
     return platform === TonPlatform._platform;
+  }
+
+  static nativeTokenId<N extends Network, C extends TonChains>(network: N, chain: C): TokenId<C> {
+    return { chain, address: "native" } as TokenId<C>;
+  }
+
+  static isNativeTokenId<N extends Network, C extends TonChains>(
+      network: N,
+      chain: C,
+      tokenId: TokenId,
+  ): boolean {
+    if (!this.isSupportedChain(chain)) return false;
+    if (tokenId.chain !== chain) return false;
+    const native = this.nativeTokenId(network, chain);
+    return native.address === "native";
+  }
+
+  static async getDecimals(network: Network, chain: Chain, rpc: Ton, token: AnyTonAddress): Promise<number> {
+    return 0;
+  }
+
+  static async getBalance(
+      network: Network,
+      chain: Chain,
+      rpc: Ton,
+      walletAddress: string,
+      token: AnyTonAddress,
+  ): Promise<bigint | null> {
+    return null;
+  }
+
+  static async getBalances(
+      network: Network,
+      chain: Chain,
+      rpc: Ton,
+      walletAddress: string,
+  ): Promise<Balances> {
+    return {} as Balances;
   }
 
   static async sendWait(_chain: Chain, _rpc: TonClient, _stxns: SignedTx[]): Promise<TxHash[]> {

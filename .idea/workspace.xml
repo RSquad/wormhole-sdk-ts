@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="247a7935-4933-4c83-8672-930296bbcd16" name="Changes" comment="feat: added ton as platform">
-      <change beforePath="$PROJECT_DIR$/.husky/commit-msg" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/commit-msg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/ton/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ton/package.json" afterDir="false" />
+    <list default="true" id="247a7935-4933-4c83-8672-930296bbcd16" name="Changes" comment="feat: push all to run wormhole on server">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/base/src/constants/decimals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/base/src/constants/decimals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ton/src/platform.ts" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ton/src/platform.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ton/src/signer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ton/src/signer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ton/tsconfig.esm.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ton/tsconfig.esm.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +136,8 @@
     <MESSAGE value="feat: Ton logo added" />
     <MESSAGE value="feat: constants for ton added" />
     <MESSAGE value="feat: added ton as platform" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added ton as platform" />
+    <MESSAGE value="feat: push all to run wormhole on server" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: push all to run wormhole on server" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

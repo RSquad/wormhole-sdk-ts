@@ -42,8 +42,9 @@ export async function getTonSigner(
   if (secretKey.length !== 32) {
     throw new Error("TON ed25519 secret key must be 32 bytes");
   }
-  const keyPair = keyPairFromSeed(secretKey);
-  const wallet = WalletContractV4.create({ workchain: 0, publicKey: Buffer.from(keyPair.publicKey) });
+  const seedBuffer = Buffer.from(secretKey);
+  const keyPair = keyPairFromSeed(seedBuffer);
+  const wallet = WalletContractV4.create({ workchain: 0, publicKey: keyPair.publicKey });
   const opened: OpenedContract<WalletContractV4> = ton.open(wallet);
 
   return new TonSigner(chain as TonChains, opened, keyPair.secretKey);
@@ -55,7 +56,7 @@ export class TonSigner<N extends Network, C extends TonChains>
   constructor(
       private _chain: C,
       private _wallet: OpenedContract<WalletContractV4>,
-      private _secretKey: Uint8Array,     // ed25519 secret key (64 bytes)
+      private _secretKey: Buffer,     // ed25519 secret key (64 bytes)
       private _debug?: boolean,
   ) {}
 
@@ -90,7 +91,7 @@ export class TonSigner<N extends Network, C extends TonChains>
       const seqno = await this._wallet.getSeqno();
 
       await this._wallet.sendTransfer({
-        secretKey: Buffer.from(this._secretKey),
+        secretKey: this._secretKey,
         seqno,
         messages: [
           internal({
