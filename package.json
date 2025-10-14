@@ -85,10 +85,5 @@
   ],
   "unreleased": [
     "tokenRegistry"
-  ],
-  "dependencies": {
-    "@ton/ton": "^15.4.0",
-    "@wormhole-foundation/sdk-base": "^1.20.0",
-    "@wormhole-foundation/sdk-connect": "^1.20.0"
-  }
+  ]
 }
