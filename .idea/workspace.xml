@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="247a7935-4933-4c83-8672-930296bbcd16" name="Changes" comment="feat: added ton as platform">
+      <change beforePath="$PROJECT_DIR$/.husky/commit-msg" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/commit-msg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ton/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ton/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file://$USER_HOME$/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.1.darwin-arm64" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mrnkslv&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:RSquad/wormhole-sdk-ts.git&quot;,
+    &quot;accountId&quot;: &quot;c4a700f0-4af1-44de-83f5-065e1230d904&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="33hKMor8b5EWCPhNXIUe0ZKaguS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ton-sdk-support&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/marina/GolandProjects/wormhole-sdk-ts/platforms/ton&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/marina/GolandProjects/wormhole-sdk-ts/node_modules/typescript/lib&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/platforms/ton" />
+      <recent name="$PROJECT_DIR$/platforms/ton/src" />
+      <recent name="$PROJECT_DIR$/core/icons/src/images/chains" />
+      <recent name="$PROJECT_DIR$/platforms/ton/protocols" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/platforms/ton" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-d297c17c1fbd-57c114c3cede-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-243.24978.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-GO-243.24978.59" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/platforms/ton/src/platform.d.ts.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/unsignedTransaction.d.ts.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/address.d.ts" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/signer.js.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/types.js.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/chain.d.ts" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/chain.js" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/unsignedTransaction.js" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/address.js.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/index.js" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/types.d.ts.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/index.js.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/unsignedTransaction.d.ts" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/index.d.ts.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/platform.js.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/types.js" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/index.d.ts" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/chain.js.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/chain.d.ts.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/address.js" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/unsignedTransaction.js.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/address.d.ts.map" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/types.d.ts" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/platform.d.ts" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/signer.d.ts" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/signer.js" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/platform.js" />
+        <option value="$PROJECT_DIR$/platforms/ton/src/signer.d.ts.map" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ton-support: logo added" />
+    <MESSAGE value="feat(ton): Ton logo added" />
+    <MESSAGE value="feat: Ton logo added" />
+    <MESSAGE value="feat: constants for ton added" />
+    <MESSAGE value="feat: added ton as platform" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added ton as platform" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
