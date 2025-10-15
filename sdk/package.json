@@ -460,7 +460,8 @@
     "@wormhole-foundation/sdk-aptos-cctp": "1.20.0",
     "@wormhole-foundation/sdk-algorand": "1.20.0",
     "@wormhole-foundation/sdk-algorand-core": "1.20.0",
-    "@wormhole-foundation/sdk-algorand-tokenbridge": "1.20.0"
+    "@wormhole-foundation/sdk-algorand-tokenbridge": "1.20.0",
+    "@wormhole-foundation/sdk-ton": "1.20.0"
   },
   "type": "module"
 }
