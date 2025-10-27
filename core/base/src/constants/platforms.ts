@@ -78,6 +78,10 @@ const platformAndChainsEntries = [[
     "Near", [
       "Near"
   ]],
+  [
+    "Ton", [
+    "Ton"
+  ]],
 ] as const satisfies MapLevel<string, RoArray<Chain>>;
 
 export const platforms = column(platformAndChainsEntries, 0);
@@ -102,6 +106,7 @@ const platformAddressFormatEntries = [
   ["Sui",       "hex"],
   ["Aptos",     "hex"],
   ["Near",      "sha256"],
+  ["Ton",       "hex"],
 ] as const;
 
 export const platformToAddressFormat = constMap(platformAddressFormatEntries);

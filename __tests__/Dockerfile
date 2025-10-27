@@ -11,7 +11,7 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./connect-sdk/
 RUN --mount=type=cache,uid=1000,gid=1000,target=/home/node/.npm \
-  npm ci --prefix connect-sdk 
+  npm ci --prefix connect-sdk
 COPY . ./connect-sdk
 RUN npm run rebuild --prefix connect-sdk
 

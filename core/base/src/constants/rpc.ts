@@ -49,6 +49,7 @@ const rpcConfig = [[
     ["XRPLEVM",   "https://rpc.xrplevm.org/"],
     ["Plasma",    "https://rpc.plasma.to/"],
     ["CreditCoin","https://mainnet3.creditcoin.network/"],
+    ["Ton",       "https://toncenter.com/api/v2/jsonRPC"],
   ]], [
   "Testnet", [
     ["Bsc",             "https://data-seed-prebsc-1-s3.binance.org:8545"],
@@ -92,6 +93,7 @@ const rpcConfig = [[
     ["XRPLEVM",         "https://rpc.testnet.xrplevm.org/"],
     ["Plasma",          "https://testnet-rpc.plasma.to"],
     ["CreditCoin",      "https://rpc.cc3-testnet.creditcoin.network"],
+    ["Ton",             "https://testnet.toncenter.com/api/v2/jsonRPC"],
   ]], [
   "Devnet", [
     ["Ethereum",  "http://eth-devnet:8545"],
